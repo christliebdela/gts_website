@@ -20,6 +20,114 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/styles.css">
+    
+    <style>
+        /* About Page Specific Styles */
+        .leadership-box {
+            transition: transform 0.3s ease;
+            background-color: white;
+        }
+        
+        .leadership-box:hover {
+            transform: translateY(-10px);
+        }
+        
+        .value-box {
+            transition: all 0.3s ease;
+        }
+        
+        .value-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+        
+        blockquote {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 20px;
+            font-style: italic;
+        }
+        
+        /* Timeline Styling */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: white;
+            border: 4px solid var(--secondary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::after {
+            right: -12px;
+        }
+        
+        .right::after {
+            left: -12px;
+        }
+        
+        .timeline-content {
+            position: relative;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 18px;
+            }
+            
+            .left::after, .right::after {
+                left: 18px;
+            }
+            
+            .right {
+                left: 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -49,7 +157,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
             <div class="container">
                 <a class="navbar-brand" href="../index.html">
-                    <img src="../images/logo.png" alt="GTS TRAILERS AFRICA LTD Logo">
+                    <img src="../images/logo.jpg" alt="GTS TRAILERS AFRICA LTD Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -106,16 +214,169 @@
     <!-- About Content -->
     <section class="about-content py-5">
         <div class="container">
-            <h2>Page Under Construction</h2>
-            <p>The About Us page is currently under development. Please check back later.</p>
-            <p>This page will include information about:</p>
-            <ul>
-                <li>Company Background</li>
-                <li>Leadership</li>
-                <li>Mission Statement</li>
-                <li>Vision Statement</li>
-            </ul>
-            <a href="../index.html" class="btn btn-primary">Return to Home</a>
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="../images/company-building.jpg" alt="GTS TRAILERS AFRICA LTD Facility" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-title text-start">
+                        <h2>Company Background</h2>
+                    </div>
+                    <p>GTS TRAILERS AFRICA LTD is a duly registered limited liability company in Ghana, established as a branch of GT GURLESENYIL TRAILER from Ankara-Turkey.</p>
+                    <p>Our parent company has a distinguished track record in the heavy cargo transportation sector, exporting high-quality trailers to more than 70 countries worldwide. The Ghana branch was established to serve the growing needs of the African market, providing European-standard trailer products and services locally.</p>
+                    <p>Our operations are backed by the prestigious "European type approval certificate" for high performance, ensuring that all our products meet rigorous international standards.</p>
+                </div>
+            </div>
+            
+            <!-- Leadership Section -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <h2>Our Leadership</h2>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="leadership-box text-center p-4 h-100 shadow rounded">
+                        <div class="leadership-img mb-4">
+                            <img src="../images/john-baidoo.jpg" alt="Mr. John Baidoo" class="img-fluid rounded-circle" style="width: 200px; height: 200px; object-fit: cover;">
+                        </div>
+                        <h3>Mr. John Baidoo</h3>
+                        <p class="text-muted mb-3">Founder & CEO</p>
+                        <p>With over 25 years of professional experience from the United States, Mr. Baidoo brings exceptional leadership to GTS TRAILERS AFRICA LTD.</p>
+                        <p>As an ASE-certified Master Technician and Operations Specialist, he has extensive expertise in precision welding, electrical diagnostics, brake systems, hydraulic systems, and tire services.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="leadership-box text-center p-4 h-100 shadow rounded">
+                        <div class="leadership-img mb-4">
+                            <img src="../images/michael-arlen.jpg" alt="Michael Arlen" class="img-fluid rounded-circle" style="width: 200px; height: 200px; object-fit: cover;">
+                        </div>
+                        <h3>Michael Arlen</h3>
+                        <p class="text-muted mb-3">Sales Manager</p>
+                        <p>Michael oversees all sales operations for GTS TRAILERS AFRICA LTD, ensuring our clients receive personalized service and the perfect trailer solutions for their specific needs.</p>
+                        <p>Contact: +233 20 625 5801</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="leadership-box text-center p-4 h-100 shadow rounded">
+                        <div class="leadership-img mb-4">
+                            <img src="../images/arif-yildirim.jpg" alt="Arif Yildirim" class="img-fluid rounded-circle" style="width: 200px; height: 200px; object-fit: cover;">
+                        </div>
+                        <h3>Arif Yildirim</h3>
+                        <p class="text-muted mb-3">Managing Director</p>
+                        <p>Arif brings extensive experience from our Turkish operations, ensuring that GTS TRAILERS AFRICA delivers the same world-class quality and service that has made our parent company successful globally.</p>
+                        <p>Contact: +233 50 705 4776</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mission & Vision Section -->
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="mission-box p-4 h-100 shadow rounded bg-light">
+                        <div class="section-title text-start mb-4">
+                            <h2>Our Mission</h2>
+                        </div>
+                        <blockquote class="blockquote">
+                            <p class="mb-0">To provide quality and safe vehicles for customers in Ghana and Africa by combining experiences with strong production infrastructure in the heavy cargo transportation sector, understanding customer needs and expectations in the best way.</p>
+                        </blockquote>
+                        <p class="mt-3">At GTS TRAILERS AFRICA LTD, we are dedicated to delivering superior products that meet the highest safety standards while understanding the unique requirements of the African market.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="vision-box p-4 h-100 shadow rounded bg-light">
+                        <div class="section-title text-start mb-4">
+                            <h2>Our Vision</h2>
+                        </div>
+                        <blockquote class="blockquote">
+                            <p class="mb-0">To follow technological developments with the aim of reaching better production standards, providing reliable and consistent quality services worldwide, and becoming a world brand that provides solutions to customers in all conditions. To become the one-stop-shop for all best quality world standard semitrailer production and supply within Ghana and the rest of Africa.</p>
+                        </blockquote>
+                        <p class="mt-3">We continuously strive to integrate the latest technologies and innovations to maintain our position as the premier trailer manufacturer in the region.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Values Section -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <h2>Our Core Values</h2>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="value-box text-center p-3 h-100 shadow-sm rounded">
+                        <div class="value-icon mb-3">
+                            <i class="fas fa-award fa-3x text-primary"></i>
+                        </div>
+                        <h4>Quality</h4>
+                        <p>Unwavering commitment to European standards in all our products and services</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="value-box text-center p-3 h-100 shadow-sm rounded">
+                        <div class="value-icon mb-3">
+                            <i class="fas fa-shield-alt fa-3x text-primary"></i>
+                        </div>
+                        <h4>Safety</h4>
+                        <p>Prioritizing the safety of our products, customers, and employees at all times</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="value-box text-center p-3 h-100 shadow-sm rounded">
+                        <div class="value-icon mb-3">
+                            <i class="fas fa-handshake fa-3x text-primary"></i>
+                        </div>
+                        <h4>Integrity</h4>
+                        <p>Conducting business with honesty, transparency, and ethical practices</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="value-box text-center p-3 h-100 shadow-sm rounded">
+                        <div class="value-icon mb-3">
+                            <i class="fas fa-lightbulb fa-3x text-primary"></i>
+                        </div>
+                        <h4>Innovation</h4>
+                        <p>Continuously improving our processes and products to meet evolving market needs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievement Timeline Section -->
+    <section class="achievements py-5 bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Our Journey</h2>
+                <p>Milestones in our path to excellence</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content shadow rounded bg-white p-4">
+                        <h4>Company Foundation</h4>
+                        <p>Establishment of GTS TRAILERS AFRICA LTD in Ghana as a branch of GT GURLESENYIL TRAILER from Ankara-Turkey</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content shadow rounded bg-white p-4">
+                        <h4>European Certification</h4>
+                        <p>Acquired the "European type approval certificate" for high-performance trailer manufacturing</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content shadow rounded bg-white p-4">
+                        <h4>Expansion</h4>
+                        <p>Expanded our manufacturing capabilities to serve clients across multiple African countries</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content shadow rounded bg-white p-4">
+                        <h4>Today</h4>
+                        <p>Operating as the premier trailer manufacturer in Ghana with a growing presence throughout Africa</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     
