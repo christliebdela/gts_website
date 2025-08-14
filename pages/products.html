@@ -24,27 +24,6 @@
 <body>
     <!-- Header Section -->
     <header>
-        <!-- Top Contact Bar -->
-        <div class="bg-dark text-white">
-            <div class="container">
-                <div class="row py-2">
-                    <div class="col-lg-6 d-none d-lg-block">
-                        <span><i class="fas fa-envelope me-2"></i>info@gtstrailers.com</span>
-                        <span class="ms-3"><i class="fas fa-phone-alt me-2"></i>+233 20 625 5801</span>
-                    </div>
-                    <div class="col-lg-6 text-end">
-                        <div class="social-icons">
-                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
             <div class="container">
@@ -72,10 +51,7 @@
                             <a class="nav-link" href="gallery.html">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="news.html">News & Press</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="opportunities.html">Opportunities</a>
+                            <!-- News & Press removed -->
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
@@ -106,19 +82,521 @@
     <!-- Products Content -->
     <section class="products-content py-5">
         <div class="container">
-            <h2>Page Under Construction</h2>
-            <p>The Products page is currently under development. Please check back later.</p>
-            <p>This page will include detailed information about our product range:</p>
-            <ol>
-                <li>FLATBED TRAILERS</li>
-                <li>STEEL/ALUMINIUM FUEL TANKER SEMITRAILERS</li>
-                <li>LPG BULK TANKERS</li>
-                <li>LOW LOADER/LOWBED</li>
-                <li>TIPPER DUMP TRAILERS</li>
-                <li>CEMENT BULK TRAILER (V-TYPE/W-TYPE)</li>
-                <li>CONCRETE MIXER SEMITRAILERS</li>
-            </ol>
-            <a href="../index.html" class="btn btn-primary">Return to Home</a>
+            <div class="section-title text-center mb-5">
+                <h2>Our Products</h2>
+                <p>European standard trailers built for African conditions</p>
+            </div>
+            
+            <!-- Products Filter -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="products-filter">
+                        <ul class="nav nav-pills justify-content-center mb-4" id="productsTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="all-products-tab" data-bs-toggle="pill" data-bs-target="#all-products" type="button" role="tab" aria-controls="all-products" aria-selected="true">All Products</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="flatbed-tab" data-bs-toggle="pill" data-bs-target="#flatbed" type="button" role="tab" aria-controls="flatbed" aria-selected="false">Flatbed</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tankers-tab" data-bs-toggle="pill" data-bs-target="#tankers" type="button" role="tab" aria-controls="tankers" aria-selected="false">Tankers</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="special-tab" data-bs-toggle="pill" data-bs-target="#special" type="button" role="tab" aria-controls="special" aria-selected="false">Special</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Products Display -->
+            <div class="tab-content" id="productsTabContent">
+                <!-- All Products Tab -->
+                <div class="tab-pane fade show active" id="all-products" role="tabpanel" aria-labelledby="all-products-tab">
+                    <div class="row">
+                        <!-- Product 1: Flatbed Trailer -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card h-100">
+                                <div class="product-img-container">
+                                    <img src="../images/products/flatbed-trailer.jpg" class="img-fluid" alt="Flatbed Trailer">
+                                    <div class="product-overlay">
+                                        <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#flatbedModal">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="product-info p-3">
+                                    <h3>Flatbed Trailer</h3>
+                                    <p>Versatile transport solution for carrying various types of cargo.</p>
+                                    <ul class="product-specs">
+                                        <li><strong>Length:</strong> 12.5m - 14.6m</li>
+                                        <li><strong>Capacity:</strong> 30-60 tons</li>
+                                        <li><strong>Axles:</strong> 2-3</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 2: Fuel Tanker Semitrailers -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card h-100">
+                                <div class="product-img-container">
+                                    <img src="../images/products/fuel-tanker.jpg" class="img-fluid" alt="Fuel Tanker Semitrailer">
+                                    <div class="product-overlay">
+                                        <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#fuelTankerModal">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="product-info p-3">
+                                    <h3>Fuel Tanker Semitrailers</h3>
+                                    <p>Safe and efficient transport of petroleum products.</p>
+                                    <ul class="product-specs">
+                                        <li><strong>Capacity:</strong> 36,000-45,000 liters</li>
+                                        <li><strong>Material:</strong> Aluminum/Stainless Steel</li>
+                                        <li><strong>Compartments:</strong> 3-5</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 3: LPG Bulk Tankers -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card h-100">
+                                <div class="product-img-container">
+                                    <img src="../images/products/lpg-tanker.jpg" class="img-fluid" alt="LPG Bulk Tanker">
+                                    <div class="product-overlay">
+                                        <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#lpgTankerModal">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="product-info p-3">
+                                    <h3>LPG Bulk Tankers</h3>
+                                    <p>Specialized tankers designed for safe transportation of liquefied petroleum gas.</p>
+                                    <ul class="product-specs">
+                                        <li><strong>Capacity:</strong> 25,000-48,000 liters</li>
+                                        <li><strong>Working Pressure:</strong> 17.2 bar</li>
+                                        <li><strong>Material:</strong> Special steel alloy</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 4: Low Loaders / Lowbeds -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card h-100">
+                                <div class="product-img-container">
+                                    <img src="../images/products/lowbed.jpg" class="img-fluid" alt="Low Loader">
+                                    <div class="product-overlay">
+                                        <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#lowbedModal">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="product-info p-3">
+                                    <h3>Low Loaders / Lowbeds</h3>
+                                    <p>Specialized trailers for transporting oversized or heavy equipment.</p>
+                                    <ul class="product-specs">
+                                        <li><strong>Capacity:</strong> Up to 100 tons</li>
+                                        <li><strong>Deck Height:</strong> 0.6m - 1m</li>
+                                        <li><strong>Axles:</strong> 3-5</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 5: Tipper Dump Trailers -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card h-100">
+                                <div class="product-img-container">
+                                    <img src="../images/products/tipper.jpg" class="img-fluid" alt="Tipper Dump Trailer">
+                                    <div class="product-overlay">
+                                        <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#tipperModal">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="product-info p-3">
+                                    <h3>Tipper Dump Trailers</h3>
+                                    <p>Robust trailers designed for efficient transport and unloading of bulk materials.</p>
+                                    <ul class="product-specs">
+                                        <li><strong>Capacity:</strong> 25-50 cubic meters</li>
+                                        <li><strong>Hydraulics:</strong> Front-end or underfloor</li>
+                                        <li><strong>Construction:</strong> Hardened steel</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 6: Cement Bulk Trailers -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card h-100">
+                                <div class="product-img-container">
+                                    <img src="../images/products/cement-bulk.jpg" class="img-fluid" alt="Cement Bulk Trailer">
+                                    <div class="product-overlay">
+                                        <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#cementBulkModal">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="product-info p-3">
+                                    <h3>Cement Bulk Trailers</h3>
+                                    <p>Specialized trailers for the transportation of cement and other dry bulk materials.</p>
+                                    <ul class="product-specs">
+                                        <li><strong>Capacity:</strong> 30-40 cubic meters</li>
+                                        <li><strong>Discharge Rate:</strong> 2-3 tons/minute</li>
+                                        <li><strong>Compressor:</strong> Integrated</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 7: Concrete Mixer Semitrailers -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card h-100">
+                                <div class="product-img-container">
+                                    <img src="../images/products/concrete-mixer.jpg" class="img-fluid" alt="Concrete Mixer Semitrailer">
+                                    <div class="product-overlay">
+                                        <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#concreteMixerModal">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="product-info p-3">
+                                    <h3>Concrete Mixer Semitrailers</h3>
+                                    <p>Mobile concrete mixing and delivery solution for construction sites.</p>
+                                    <ul class="product-specs">
+                                        <li><strong>Capacity:</strong> 8-12 cubic meters</li>
+                                        <li><strong>Mixing Speed:</strong> 0-14 rpm</li>
+                                        <li><strong>Hydraulic System:</strong> Independent</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 8: Custom Trailers -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card h-100">
+                                <div class="product-img-container">
+                                    <img src="../images/products/custom-trailer.jpg" class="img-fluid" alt="Custom Trailer">
+                                    <div class="product-overlay">
+                                        <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#customTrailerModal">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="product-info p-3">
+                                    <h3>Custom Trailers</h3>
+                                    <p>Bespoke trailer solutions designed to meet your specific requirements.</p>
+                                    <ul class="product-specs">
+                                        <li><strong>Customization:</strong> Full design flexibility</li>
+                                        <li><strong>Applications:</strong> Multiple industries</li>
+                                        <li><strong>Engineering:</strong> Custom specifications</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Flatbed Tab -->
+                <div class="tab-pane fade" id="flatbed" role="tabpanel" aria-labelledby="flatbed-tab">
+                    <div class="row">
+                        <!-- Flatbed Trailer -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card h-100">
+                                <div class="product-img-container">
+                                    <img src="../images/products/flatbed-trailer.jpg" class="img-fluid" alt="Flatbed Trailer">
+                                    <div class="product-overlay">
+                                        <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#flatbedModal">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="product-info p-3">
+                                    <h3>Flatbed Trailer</h3>
+                                    <p>Versatile transport solution for carrying various types of cargo.</p>
+                                    <ul class="product-specs">
+                                        <li><strong>Length:</strong> 12.5m - 14.6m</li>
+                                        <li><strong>Capacity:</strong> 30-60 tons</li>
+                                        <li><strong>Axles:</strong> 2-3</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Extendable Flatbed -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card h-100">
+                                <div class="product-img-container">
+                                    <img src="../images/products/extendable-flatbed.jpg" class="img-fluid" alt="Extendable Flatbed">
+                                    <div class="product-overlay">
+                                        <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#extendableFlatbedModal">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="product-info p-3">
+                                    <h3>Extendable Flatbed</h3>
+                                    <p>Adjustable length flatbed for transporting longer loads.</p>
+                                    <ul class="product-specs">
+                                        <li><strong>Extended Length:</strong> Up to 21m</li>
+                                        <li><strong>Capacity:</strong> 30-50 tons</li>
+                                        <li><strong>Extension:</strong> Hydraulic/Manual</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tankers Tab -->
+                <div class="tab-pane fade" id="tankers" role="tabpanel" aria-labelledby="tankers-tab">
+                    <div class="row">
+                        <!-- Fuel Tanker -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card h-100">
+                                <div class="product-img-container">
+                                    <img src="../images/products/fuel-tanker.jpg" class="img-fluid" alt="Fuel Tanker Semitrailer">
+                                    <div class="product-overlay">
+                                        <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#fuelTankerModal">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="product-info p-3">
+                                    <h3>Fuel Tanker Semitrailers</h3>
+                                    <p>Safe and efficient transport of petroleum products.</p>
+                                    <ul class="product-specs">
+                                        <li><strong>Capacity:</strong> 36,000-45,000 liters</li>
+                                        <li><strong>Material:</strong> Aluminum/Stainless Steel</li>
+                                        <li><strong>Compartments:</strong> 3-5</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- LPG Tanker -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card h-100">
+                                <div class="product-img-container">
+                                    <img src="../images/products/lpg-tanker.jpg" class="img-fluid" alt="LPG Bulk Tanker">
+                                    <div class="product-overlay">
+                                        <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#lpgTankerModal">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="product-info p-3">
+                                    <h3>LPG Bulk Tankers</h3>
+                                    <p>Specialized tankers designed for safe transportation of liquefied petroleum gas.</p>
+                                    <ul class="product-specs">
+                                        <li><strong>Capacity:</strong> 25,000-48,000 liters</li>
+                                        <li><strong>Working Pressure:</strong> 17.2 bar</li>
+                                        <li><strong>Material:</strong> Special steel alloy</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Cement Bulk Trailer -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card h-100">
+                                <div class="product-img-container">
+                                    <img src="../images/products/cement-bulk.jpg" class="img-fluid" alt="Cement Bulk Trailer">
+                                    <div class="product-overlay">
+                                        <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#cementBulkModal">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="product-info p-3">
+                                    <h3>Cement Bulk Trailers</h3>
+                                    <p>Specialized trailers for the transportation of cement and other dry bulk materials.</p>
+                                    <ul class="product-specs">
+                                        <li><strong>Capacity:</strong> 30-40 cubic meters</li>
+                                        <li><strong>Discharge Rate:</strong> 2-3 tons/minute</li>
+                                        <li><strong>Compressor:</strong> Integrated</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Special Tab -->
+                <div class="tab-pane fade" id="special" role="tabpanel" aria-labelledby="special-tab">
+                    <div class="row">
+                        <!-- Low Loader -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card h-100">
+                                <div class="product-img-container">
+                                    <img src="../images/products/lowbed.jpg" class="img-fluid" alt="Low Loader">
+                                    <div class="product-overlay">
+                                        <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#lowbedModal">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="product-info p-3">
+                                    <h3>Low Loaders / Lowbeds</h3>
+                                    <p>Specialized trailers for transporting oversized or heavy equipment.</p>
+                                    <ul class="product-specs">
+                                        <li><strong>Capacity:</strong> Up to 100 tons</li>
+                                        <li><strong>Deck Height:</strong> 0.6m - 1m</li>
+                                        <li><strong>Axles:</strong> 3-5</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tipper Dump Trailer -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card h-100">
+                                <div class="product-img-container">
+                                    <img src="../images/products/tipper.jpg" class="img-fluid" alt="Tipper Dump Trailer">
+                                    <div class="product-overlay">
+                                        <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#tipperModal">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="product-info p-3">
+                                    <h3>Tipper Dump Trailers</h3>
+                                    <p>Robust trailers designed for efficient transport and unloading of bulk materials.</p>
+                                    <ul class="product-specs">
+                                        <li><strong>Capacity:</strong> 25-50 cubic meters</li>
+                                        <li><strong>Hydraulics:</strong> Front-end or underfloor</li>
+                                        <li><strong>Construction:</strong> Hardened steel</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Concrete Mixer Semitrailer -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card h-100">
+                                <div class="product-img-container">
+                                    <img src="../images/products/concrete-mixer.jpg" class="img-fluid" alt="Concrete Mixer Semitrailer">
+                                    <div class="product-overlay">
+                                        <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#concreteMixerModal">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="product-info p-3">
+                                    <h3>Concrete Mixer Semitrailers</h3>
+                                    <p>Mobile concrete mixing and delivery solution for construction sites.</p>
+                                    <ul class="product-specs">
+                                        <li><strong>Capacity:</strong> 8-12 cubic meters</li>
+                                        <li><strong>Mixing Speed:</strong> 0-14 rpm</li>
+                                        <li><strong>Hydraulic System:</strong> Independent</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Custom Trailer -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card h-100">
+                                <div class="product-img-container">
+                                    <img src="../images/products/custom-trailer.jpg" class="img-fluid" alt="Custom Trailer">
+                                    <div class="product-overlay">
+                                        <a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#customTrailerModal">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="product-info p-3">
+                                    <h3>Custom Trailers</h3>
+                                    <p>Bespoke trailer solutions designed to meet your specific requirements.</p>
+                                    <ul class="product-specs">
+                                        <li><strong>Customization:</strong> Full design flexibility</li>
+                                        <li><strong>Applications:</strong> Multiple industries</li>
+                                        <li><strong>Engineering:</strong> Custom specifications</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details Modals -->
+    <!-- Flatbed Modal -->
+    <div class="modal fade" id="flatbedModal" tabindex="-1" aria-labelledby="flatbedModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="flatbedModalLabel">Flatbed Trailer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="../images/products/flatbed-trailer.jpg" class="img-fluid rounded" alt="Flatbed Trailer">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Technical Specifications</h4>
+                            <ul>
+                                <li><strong>Length:</strong> 12.5m - 14.6m</li>
+                                <li><strong>Width:</strong> 2.5m</li>
+                                <li><strong>Loading Capacity:</strong> 30-60 tons</li>
+                                <li><strong>Deck Material:</strong> Hardwood/Steel</li>
+                                <li><strong>Axles:</strong> 2-3 BPW/SAF</li>
+                                <li><strong>Suspension:</strong> Air suspension</li>
+                                <li><strong>Tires:</strong> 12.00R20 or 315/80R22.5</li>
+                                <li><strong>Braking System:</strong> WABCO dual-circuit air</li>
+                                <li><strong>Lighting:</strong> 24V LED system</li>
+                            </ul>
+                            <h4>Features</h4>
+                            <ul>
+                                <li>Reinforced chassis for durability</li>
+                                <li>Multiple securing points for cargo</li>
+                                <li>Toolbox and spare wheel holder</li>
+                                <li>Optional side rails and stake pockets</li>
+                                <li>Anti-slip floor coating</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="contact.html" class="btn btn-primary">Inquire</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fuel Tanker Modal -->
+    <div class="modal fade" id="fuelTankerModal" tabindex="-1" aria-labelledby="fuelTankerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="fuelTankerModalLabel">Fuel Tanker Semitrailers</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="../images/products/fuel-tanker.jpg" class="img-fluid rounded" alt="Fuel Tanker Semitrailer">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Technical Specifications</h4>
+                            <ul>
+                                <li><strong>Capacity:</strong> 36,000-45,000 liters</li>
+                                <li><strong>Tank Material:</strong> Aluminum/Stainless Steel</li>
+                                <li><strong>Compartments:</strong> 3-5 with individual valves</li>
+                                <li><strong>Axles:</strong> 3 BPW/SAF</li>
+                                <li><strong>Suspension:</strong> Air suspension</li>
+                                <li><strong>Loading:</strong> Top loading</li>
+                                <li><strong>Discharge:</strong> Bottom discharge with API connections</li>
+                                <li><strong>Safety:</strong> Anti-surge baffles, overfill protection</li>
+                                <li><strong>Standards:</strong> Meets ADR regulations</li>
+                            </ul>
+                            <h4>Features</h4>
+                            <ul>
+                                <li>Bottom loading/unloading capability</li>
+                                <li>Vapor recovery system</li>
+                                <li>Electronic level gauges</li>
+                                <li>Anti-roll stability system</li>
+                                <li>Optional metering system</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="contact.html" class="btn btn-primary">Inquire</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Other product modals would follow the same pattern... -->
+
+    <!-- Call to Action Section -->
+    <section class="products-cta py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2>Need a Custom Trailer Solution?</h2>
+                    <p class="lead mb-4">We specialize in designing and building trailers to meet your specific requirements.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary btn-lg">Contact Us</a>
+                        <a href="#" class="btn btn-outline-primary btn-lg ms-3">Download Brochure</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     

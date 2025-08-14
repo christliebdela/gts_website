@@ -7,6 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     });
     
+    // Initialize Bootstrap tabs
+    var tabElList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tab"]'))
+    var tabList = tabElList.map(function (tabEl) {
+        return new bootstrap.Tab(tabEl)
+    });
+    
     // Smooth scrolling for anchor links
     document.querySelectorAll('a.smooth-scroll').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

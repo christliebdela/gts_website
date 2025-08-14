@@ -24,27 +24,6 @@
 <body>
     <!-- Header Section -->
     <header>
-        <!-- Top Contact Bar -->
-        <div class="bg-dark text-white">
-            <div class="container">
-                <div class="row py-2">
-                    <div class="col-lg-6 d-none d-lg-block">
-                        <span><i class="fas fa-envelope me-2"></i>info@gtstrailers.com</span>
-                        <span class="ms-3"><i class="fas fa-phone-alt me-2"></i>+233 20 625 5801</span>
-                    </div>
-                    <div class="col-lg-6 text-end">
-                        <div class="social-icons">
-                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
             <div class="container">
@@ -72,10 +51,7 @@
                             <a class="nav-link" href="gallery.html">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="news.html">News & Press</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="opportunities.html">Opportunities</a>
+                            <!-- News & Press removed -->
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
@@ -106,20 +82,473 @@
     <!-- Services Content -->
     <section class="services-content py-5">
         <div class="container">
-            <h2>Page Under Construction</h2>
-            <p>The Services page is currently under development. Please check back later.</p>
-            <p>This page will include information about our services:</p>
-            <ol>
-                <li>Manufacturing all kinds of trailers</li>
-                <li>General Metal Fabrication and Welding Works</li>
-                <li>Trailers Refurbishment & Repairs</li>
-                <li>Truck Repairs & Maintenance Services</li>
-                <li>Light & Heavy Vehicle Wheel Alignment Services</li>
-                <li>Trucks and Trailer Spare Parts Sales</li>
-                <li>Sales of light and heavy New & Home used Vehicle Tyres of all sizes</li>
-                <li>Other Machines Rentals and Sales</li>
-            </ol>
-            <a href="../index.html" class="btn btn-primary">Return to Home</a>
+            <div class="section-title text-center mb-5">
+                <h2>Our Services</h2>
+                <p>Comprehensive solutions for all your trailer and heavy equipment needs</p>
+            </div>
+            
+            <!-- Services Navigation -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="services-tabs">
+                        <ul class="nav nav-pills justify-content-center mb-4" id="servicesTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all-services" type="button" role="tab" aria-controls="all-services" aria-selected="true">All Services</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="manufacturing-tab" data-bs-toggle="pill" data-bs-target="#manufacturing" type="button" role="tab" aria-controls="manufacturing" aria-selected="false">Manufacturing</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="repairs-tab" data-bs-toggle="pill" data-bs-target="#repairs" type="button" role="tab" aria-controls="repairs" aria-selected="false">Repairs</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="sales-tab" data-bs-toggle="pill" data-bs-target="#sales" type="button" role="tab" aria-controls="sales" aria-selected="false">Sales</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="additional-tab" data-bs-toggle="pill" data-bs-target="#additional" type="button" role="tab" aria-controls="additional" aria-selected="false">Additional</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Services Content -->
+            <div class="tab-content" id="servicesTabContent">
+                <!-- All Services Tab -->
+                <div class="tab-pane fade show active" id="all-services" role="tabpanel" aria-labelledby="all-tab">
+                    <div class="row">
+                        <!-- Service 1 -->
+                        <div class="col-md-6 mb-4" id="service-manufacturing">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-truck-moving fa-3x text-primary"></i>
+                                </div>
+                                <h3>Manufacturing All Kinds of Trailers</h3>
+                                <p>At GTS TRAILERS AFRICA LTD, we specialize in the design and manufacturing of various types of trailers to meet diverse transportation needs. Our manufacturing capabilities include:</p>
+                                <ul>
+                                    <li>Flatbed Trailers</li>
+                                    <li>Fuel Tanker Semitrailers</li>
+                                    <li>LPG Bulk Tankers</li>
+                                    <li>Low Loaders/Lowbeds</li>
+                                    <li>Tipper Dump Trailers</li>
+                                    <li>Cement Bulk Trailers</li>
+                                    <li>Concrete Mixer Semitrailers</li>
+                                </ul>
+                                <p>All our trailers are built to European standards, ensuring durability, safety, and optimal performance.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 2 -->
+                        <div class="col-md-6 mb-4" id="service-fabrication">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-cogs fa-3x text-primary"></i>
+                                </div>
+                                <h3>General Metal Fabrication and Welding Works</h3>
+                                <p>Our state-of-the-art metal fabrication workshop offers comprehensive solutions for various metal fabrication needs, including:</p>
+                                <ul>
+                                    <li>Precision metal cutting and shaping</li>
+                                    <li>High-quality welding services</li>
+                                    <li>Custom metal parts fabrication</li>
+                                    <li>Sheet metal work</li>
+                                    <li>Structural steel fabrication</li>
+                                    <li>Metal bending and forming</li>
+                                </ul>
+                                <p>We work with different metals and employ advanced techniques to deliver superior results for both small and large-scale projects.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 3 -->
+                        <div class="col-md-6 mb-4" id="service-refurbishment">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-tools fa-3x text-primary"></i>
+                                </div>
+                                <h3>Trailers Refurbishment & Repairs</h3>
+                                <p>Extend the life and improve the performance of your existing trailers with our comprehensive refurbishment and repair services:</p>
+                                <ul>
+                                    <li>Complete structural repairs</li>
+                                    <li>Hydraulic system overhaul</li>
+                                    <li>Brake system servicing</li>
+                                    <li>Suspension repairs and upgrades</li>
+                                    <li>Electrical system diagnostics and repairs</li>
+                                    <li>Body repair and repainting</li>
+                                    <li>Interior upgrades and modifications</li>
+                                </ul>
+                                <p>Our experienced technicians can restore your trailer to optimal condition, regardless of its current state.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 4 -->
+                        <div class="col-md-6 mb-4" id="service-truck-repairs">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-wrench fa-3x text-primary"></i>
+                                </div>
+                                <h3>Truck Repairs & Maintenance Services</h3>
+                                <p>Keep your trucks operating at peak performance with our comprehensive repair and maintenance services:</p>
+                                <ul>
+                                    <li>Engine diagnostics and repairs</li>
+                                    <li>Transmission servicing</li>
+                                    <li>Brake system maintenance</li>
+                                    <li>Electrical system repairs</li>
+                                    <li>Suspension and steering system maintenance</li>
+                                    <li>Preventive maintenance programs</li>
+                                    <li>Emergency repair services</li>
+                                </ul>
+                                <p>Our team includes ASE-certified technicians with extensive experience working on various truck makes and models.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 5 -->
+                        <div class="col-md-6 mb-4" id="service-alignment">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-balance-scale fa-3x text-primary"></i>
+                                </div>
+                                <h3>Light & Heavy Vehicle Wheel Alignment Services</h3>
+                                <p>Proper wheel alignment is crucial for vehicle safety, tire longevity, and fuel efficiency. Our alignment services include:</p>
+                                <ul>
+                                    <li>Computerized wheel alignment for light vehicles</li>
+                                    <li>Specialized alignment for heavy-duty trucks and trailers</li>
+                                    <li>Multi-axle alignment services</li>
+                                    <li>Camber, caster, and toe adjustment</li>
+                                    <li>Tire balancing</li>
+                                    <li>Suspension inspection</li>
+                                </ul>
+                                <p>We use advanced alignment equipment to ensure precise adjustments for optimal vehicle performance.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 6 -->
+                        <div class="col-md-6 mb-4" id="service-spare-parts">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-cog fa-3x text-primary"></i>
+                                </div>
+                                <h3>Trucks and Trailer Spare Parts Sales</h3>
+                                <p>We offer a comprehensive range of high-quality spare parts for trucks and trailers, including:</p>
+                                <ul>
+                                    <li>Engine components</li>
+                                    <li>Brake system parts</li>
+                                    <li>Suspension components</li>
+                                    <li>Hydraulic parts</li>
+                                    <li>Electrical components</li>
+                                    <li>Trailer accessories</li>
+                                    <li>Filters, fluids, and lubricants</li>
+                                </ul>
+                                <p>Our parts inventory includes both OEM and high-quality aftermarket options to suit different budgets while maintaining quality standards.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 7 -->
+                        <div class="col-md-6 mb-4" id="service-tyres">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-tire fa-3x text-primary"></i>
+                                </div>
+                                <h3>Sales of Light and Heavy Vehicle Tyres</h3>
+                                <p>We offer a wide selection of both new and quality used tyres for various vehicles:</p>
+                                <ul>
+                                    <li>Truck tyres of all sizes</li>
+                                    <li>Trailer-specific tyres</li>
+                                    <li>Light commercial vehicle tyres</li>
+                                    <li>Passenger vehicle tyres</li>
+                                    <li>Specialty tyres for industrial applications</li>
+                                    <li>Tyre mounting and balancing services</li>
+                                    <li>Tyre pressure monitoring</li>
+                                </ul>
+                                <p>Our tyre experts can help you select the right tyres for your specific vehicle and usage requirements.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 8 -->
+                        <div class="col-md-6 mb-4" id="service-rentals">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-exchange-alt fa-3x text-primary"></i>
+                                </div>
+                                <h3>Other Machines Rentals and Sales</h3>
+                                <p>Beyond trailers and trucks, we offer rental and sales options for various machines and equipment:</p>
+                                <ul>
+                                    <li>Construction equipment</li>
+                                    <li>Material handling equipment</li>
+                                    <li>Industrial generators</li>
+                                    <li>Compressors</li>
+                                    <li>Welding machines</li>
+                                    <li>Specialized tools</li>
+                                    <li>Workshop equipment</li>
+                                </ul>
+                                <p>Our rental options provide a cost-effective solution for short-term projects, while our sales department can help you acquire the right equipment for your long-term needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Manufacturing Tab -->
+                <div class="tab-pane fade" id="manufacturing" role="tabpanel" aria-labelledby="manufacturing-tab">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-truck-moving fa-3x text-primary"></i>
+                                </div>
+                                <h3>Manufacturing All Kinds of Trailers</h3>
+                                <p>At GTS TRAILERS AFRICA LTD, we specialize in the design and manufacturing of various types of trailers to meet diverse transportation needs. Our manufacturing capabilities include:</p>
+                                <ul>
+                                    <li>Flatbed Trailers</li>
+                                    <li>Fuel Tanker Semitrailers</li>
+                                    <li>LPG Bulk Tankers</li>
+                                    <li>Low Loaders/Lowbeds</li>
+                                    <li>Tipper Dump Trailers</li>
+                                    <li>Cement Bulk Trailers</li>
+                                    <li>Concrete Mixer Semitrailers</li>
+                                </ul>
+                                <p>All our trailers are built to European standards, ensuring durability, safety, and optimal performance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-cogs fa-3x text-primary"></i>
+                                </div>
+                                <h3>General Metal Fabrication and Welding Works</h3>
+                                <p>Our state-of-the-art metal fabrication workshop offers comprehensive solutions for various metal fabrication needs, including:</p>
+                                <ul>
+                                    <li>Precision metal cutting and shaping</li>
+                                    <li>High-quality welding services</li>
+                                    <li>Custom metal parts fabrication</li>
+                                    <li>Sheet metal work</li>
+                                    <li>Structural steel fabrication</li>
+                                    <li>Metal bending and forming</li>
+                                </ul>
+                                <p>We work with different metals and employ advanced techniques to deliver superior results for both small and large-scale projects.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Repairs Tab -->
+                <div class="tab-pane fade" id="repairs" role="tabpanel" aria-labelledby="repairs-tab">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-tools fa-3x text-primary"></i>
+                                </div>
+                                <h3>Trailers Refurbishment & Repairs</h3>
+                                <p>Extend the life and improve the performance of your existing trailers with our comprehensive refurbishment and repair services:</p>
+                                <ul>
+                                    <li>Complete structural repairs</li>
+                                    <li>Hydraulic system overhaul</li>
+                                    <li>Brake system servicing</li>
+                                    <li>Suspension repairs and upgrades</li>
+                                    <li>Electrical system diagnostics and repairs</li>
+                                    <li>Body repair and repainting</li>
+                                    <li>Interior upgrades and modifications</li>
+                                </ul>
+                                <p>Our experienced technicians can restore your trailer to optimal condition, regardless of its current state.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-wrench fa-3x text-primary"></i>
+                                </div>
+                                <h3>Truck Repairs & Maintenance Services</h3>
+                                <p>Keep your trucks operating at peak performance with our comprehensive repair and maintenance services:</p>
+                                <ul>
+                                    <li>Engine diagnostics and repairs</li>
+                                    <li>Transmission servicing</li>
+                                    <li>Brake system maintenance</li>
+                                    <li>Electrical system repairs</li>
+                                    <li>Suspension and steering system maintenance</li>
+                                    <li>Preventive maintenance programs</li>
+                                    <li>Emergency repair services</li>
+                                </ul>
+                                <p>Our team includes ASE-certified technicians with extensive experience working on various truck makes and models.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-balance-scale fa-3x text-primary"></i>
+                                </div>
+                                <h3>Light & Heavy Vehicle Wheel Alignment Services</h3>
+                                <p>Proper wheel alignment is crucial for vehicle safety, tire longevity, and fuel efficiency. Our alignment services include:</p>
+                                <ul>
+                                    <li>Computerized wheel alignment for light vehicles</li>
+                                    <li>Specialized alignment for heavy-duty trucks and trailers</li>
+                                    <li>Multi-axle alignment services</li>
+                                    <li>Camber, caster, and toe adjustment</li>
+                                    <li>Tire balancing</li>
+                                    <li>Suspension inspection</li>
+                                </ul>
+                                <p>We use advanced alignment equipment to ensure precise adjustments for optimal vehicle performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sales Tab -->
+                <div class="tab-pane fade" id="sales" role="tabpanel" aria-labelledby="sales-tab">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-cog fa-3x text-primary"></i>
+                                </div>
+                                <h3>Trucks and Trailer Spare Parts Sales</h3>
+                                <p>We offer a comprehensive range of high-quality spare parts for trucks and trailers, including:</p>
+                                <ul>
+                                    <li>Engine components</li>
+                                    <li>Brake system parts</li>
+                                    <li>Suspension components</li>
+                                    <li>Hydraulic parts</li>
+                                    <li>Electrical components</li>
+                                    <li>Trailer accessories</li>
+                                    <li>Filters, fluids, and lubricants</li>
+                                </ul>
+                                <p>Our parts inventory includes both OEM and high-quality aftermarket options to suit different budgets while maintaining quality standards.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-tire fa-3x text-primary"></i>
+                                </div>
+                                <h3>Sales of Light and Heavy Vehicle Tyres</h3>
+                                <p>We offer a wide selection of both new and quality used tyres for various vehicles:</p>
+                                <ul>
+                                    <li>Truck tyres of all sizes</li>
+                                    <li>Trailer-specific tyres</li>
+                                    <li>Light commercial vehicle tyres</li>
+                                    <li>Passenger vehicle tyres</li>
+                                    <li>Specialty tyres for industrial applications</li>
+                                    <li>Tyre mounting and balancing services</li>
+                                    <li>Tyre pressure monitoring</li>
+                                </ul>
+                                <p>Our tyre experts can help you select the right tyres for your specific vehicle and usage requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Tab -->
+                <div class="tab-pane fade" id="additional" role="tabpanel" aria-labelledby="additional-tab">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-headset fa-3x text-primary"></i>
+                                </div>
+                                <h3>After Sales Service</h3>
+                                <p>Our commitment to our customers extends beyond the initial sale. Our after-sales service includes:</p>
+                                <ul>
+                                    <li>Warranty support and claim processing</li>
+                                    <li>Technical support and troubleshooting</li>
+                                    <li>Maintenance schedules and reminders</li>
+                                    <li>Customer training for equipment operation</li>
+                                    <li>24/7 emergency support</li>
+                                </ul>
+                                <p>We strive to build long-term relationships with our clients by providing reliable support when you need it.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-globe-africa fa-3x text-primary"></i>
+                                </div>
+                                <h3>Exports</h3>
+                                <p>We facilitate the export of our high-quality trailers and equipment throughout Africa:</p>
+                                <ul>
+                                    <li>International shipping coordination</li>
+                                    <li>Export documentation assistance</li>
+                                    <li>Customs clearance support</li>
+                                    <li>Cross-border delivery arrangements</li>
+                                    <li>International warranty support</li>
+                                </ul>
+                                <p>Our logistics expertise ensures smooth delivery of your equipment regardless of the destination within Africa.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-sync-alt fa-3x text-primary"></i>
+                                </div>
+                                <h3>Modifications & Refurbishment</h3>
+                                <p>We can modify or refurbish your existing equipment to meet new requirements or extend service life:</p>
+                                <ul>
+                                    <li>Trailer modifications for specific cargo needs</li>
+                                    <li>Capacity upgrades</li>
+                                    <li>Safety feature installations</li>
+                                    <li>Complete refurbishment of older equipment</li>
+                                    <li>Modern technology integration</li>
+                                </ul>
+                                <p>Our skilled technicians can transform your existing equipment to meet your changing business needs.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-lightbulb fa-3x text-primary"></i>
+                                </div>
+                                <h3>Special Solutions</h3>
+                                <p>When standard equipment doesn't meet your unique needs, we create custom solutions:</p>
+                                <ul>
+                                    <li>Custom trailer designs for specialized cargo</li>
+                                    <li>Industry-specific equipment modifications</li>
+                                    <li>Integration of specialized technologies</li>
+                                    <li>Problem-solving for challenging transportation requirements</li>
+                                    <li>Prototype development for new applications</li>
+                                </ul>
+                                <p>Our engineering team thrives on creating innovative solutions for your most challenging requirements.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="service-item p-4 bg-white shadow rounded h-100">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-exchange-alt fa-3x text-primary"></i>
+                                </div>
+                                <h3>Other Machines Rentals and Sales</h3>
+                                <p>Beyond trailers and trucks, we offer rental and sales options for various machines and equipment:</p>
+                                <ul>
+                                    <li>Construction equipment</li>
+                                    <li>Material handling equipment</li>
+                                    <li>Industrial generators</li>
+                                    <li>Compressors</li>
+                                    <li>Welding machines</li>
+                                    <li>Specialized tools</li>
+                                    <li>Workshop equipment</li>
+                                </ul>
+                                <p>Our rental options provide a cost-effective solution for short-term projects, while our sales department can help you acquire the right equipment for your long-term needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="services-cta py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h2>Need a Custom Solution?</h2>
+                    <p class="lead mb-4">Our team of experts is ready to help with your specific requirements.</p>
+                    <a href="contact.html" class="btn btn-primary btn-lg">Contact Us</a>
+                    <a href="contact.html#quote" class="btn btn-outline-primary btn-lg ms-3">Request a Quote</a>
+                </div>
+            </div>
         </div>
     </section>
     
