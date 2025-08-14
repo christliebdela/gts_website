@@ -1,3 +1,147 @@
+.related-product-card-sm {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 0.97rem;
+  min-height: unset;
+}
+.related-product-card-sm .card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.related-product-card-sm .card-body {
+  padding: 0.5rem 0.75rem;
+}
+.related-product-card-sm .card-img-top {
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+.product-hero {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.product-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+}
+.product-hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+.specs-box {
+  border-left: 4px solid var(--primary-color);
+}
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+}
+.feature-list li {
+  margin-bottom: 0.75rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+.feature-list li:before {
+  content: '\f058';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+.related-product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.related-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.breadcrumb-wrapper {
+  background: #f8f9fa;
+}
+/* Modern Product Card Styles */
+.product-card-modern {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px -8px rgba(26,75,132,0.10), 0 1.5px 6px 0 rgba(0,0,0,0.04);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s, transform 0.3s;
+  border: 1px solid #e5e9ef;
+  position: relative;
+}
+.product-card-modern:hover {
+  box-shadow: 0 16px 40px -10px rgba(26,75,132,0.18), 0 2px 8px 0 rgba(0,0,0,0.06);
+  transform: translateY(-4px) scale(1.025);
+}
+.product-card-img-wrap {
+  width: 100%;
+  height: 180px;
+  background: #f4f8fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.product-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(.19,1,.22,1);
+}
+.product-card-modern:hover .product-card-img-wrap img {
+  transform: scale(1.08);
+}
+.product-card-body {
+  padding: 1.25rem 1rem 1.1rem 1rem;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+.product-card-accent {
+  width: 38px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--secondary-color);
+  margin-bottom: 0.7rem;
+  margin-top: -1.2rem;
+}
+.product-card-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.product-card-desc {
+  font-size: 0.97rem;
+  color: #444;
+  margin-bottom: 0;
+  opacity: 0.85;
+}
+@media (max-width: 576px) {
+  .product-card-img-wrap {
+    height: 120px;
+  }
+  .product-card-body {
+    padding: 0.85rem 0.7rem 0.8rem 0.7rem;
+  }
+}
 /* GTS TRAILERS AFRICA LTD - Main Stylesheet */
 
 /* Global Styles */
@@ -119,17 +263,17 @@ img {
 .stat-item p {font-size:.75rem;letter-spacing:.5px;text-transform:uppercase;margin-top:4px;color:#555;}
 
 /* Feature cards */
-.feature-card {background:#fff;border:1px solid #e5e9ef;border-radius:14px;padding:32px 26px;position:relative;overflow:hidden;transition:all .4s ease;box-shadow:0 4px 14px -4px rgba(0,0,0,.08);} 
-.feature-card::before {content:"";position:absolute;top:-40%;right:-40%;width:70%;height:180%;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));opacity:0;filter:blur(40px);transition:.7s;} 
-.feature-card:hover::before {opacity:.4;} 
-.feature-card .icon-wrap {width:54px;height:54px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:#fff;font-size:22px;margin-bottom:20px;box-shadow:0 6px 18px -6px rgba(26,75,132,.5);} 
+.feature-card {background:#fff;border:1px solid #e5e9ef;border-radius:14px;padding:32px 26px;position:relative;overflow:hidden;transition:box-shadow .3s ease, transform .3s ease;box-shadow:0 4px 14px -4px rgba(0,0,0,.06);} 
+/* Removed gradient glow & replaced icon background with solid color */
+.feature-card::before {display:none;} 
+.feature-card .icon-wrap {width:54px;height:54px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:var(--primary-color);color:#fff;font-size:22px;margin-bottom:20px;box-shadow:0 4px 10px -4px rgba(0,0,0,.25);} 
 .feature-card h3 {font-size:1.15rem;font-weight:600;margin-bottom:10px;} 
 .feature-card p {font-size:.9rem;line-height:1.4;margin:0;}
-.feature-card:hover {transform:translateY(-6px);box-shadow:0 20px 38px -15px rgba(0,0,0,.3);} 
+.feature-card:hover {transform:translateY(-4px);box-shadow:0 12px 26px -10px rgba(0,0,0,.18);} 
 
 /* Process flow */
 .process-flow .process-steps .step .step-inner {background:#fff;border:1px solid #e5e9ef;padding:26px 16px;border-radius:14px;text-align:center;position:relative;overflow:hidden;transition:all .4s ease;box-shadow:0 4px 14px -6px rgba(0,0,0,.08);} 
-.process-flow .step-number {width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:#fff;font-weight:600;margin-bottom:10px;box-shadow:0 4px 14px -4px rgba(0,0,0,.3);} 
+.process-flow .step-number {width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;background:var(--primary-color);color:#fff;font-weight:600;margin-bottom:10px;box-shadow:0 4px 10px -4px rgba(0,0,0,.25);} 
 .process-flow .step h4 {font-size:.95rem;font-weight:600;letter-spacing:.5px;margin-bottom:6px;} 
 .process-flow .step p {font-size:.75rem;letter-spacing:.3px;margin:0;color:#555;} 
 .process-flow .step .step-inner:hover {transform:translateY(-6px);box-shadow:0 16px 34px -12px rgba(0,0,0,.25);} 

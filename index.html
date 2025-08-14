@@ -110,71 +110,93 @@
         </div>
     </section>
 
-    <!-- Products Highlight Section (replaces About section) -->
-    <section class="py-5 products-hero-section premium-section">
+    <!-- Products Highlight Section (simplified) -->
+    <section class="py-5 bg-white">
         <div class="container">
-            <div class="section-title text-center mb-4">
-                <h2>Our Products</h2>
-                <p class="mb-0">Engineered for performance, durability & efficiency</p>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 col-lg-4">
-                    <div class="product-grid-item">
-                        <img src="images/products/gts_product_1.jpeg" alt="Trailer Product 1">
-                        <div class="product-grid-caption">
-                            <h3>Flatbed Trailer</h3>
-                            <p>Versatile heavy-duty transport</p>
-                        </div>
-                    </div>
+            <div class="d-flex flex-wrap align-items-end justify-content-between mb-4">
+                <div>
+                    <h2 class="h3 mb-1" style="color:var(--primary-color);">Core Products</h2>
+                    <p class="text-muted mb-0 small">A snapshot of our most requested builds</p>
                 </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="product-grid-item">
-                        <img src="images/products/gts_product_2.jpeg" alt="Trailer Product 2">
-                        <div class="product-grid-caption">
-                            <h3>Fuel Tanker</h3>
-                            <p>Multi-compartment efficiency</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="product-grid-item">
-                        <img src="images/products/gts_product_3.jpeg" alt="Trailer Product 3">
-                        <div class="product-grid-caption">
-                            <h3>Low Loader</h3>
-                            <p>High-capacity heavy haul</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="product-grid-item">
-                        <img src="images/products/gts_product_4.jpeg" alt="Trailer Product 4">
-                        <div class="product-grid-caption">
-                            <h3>Tipper Dump</h3>
-                            <p>Robust payload handling</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="product-grid-item">
-                        <img src="images/products/gts_product_5.jpeg" alt="Trailer Product 5">
-                        <div class="product-grid-caption">
-                            <h3>Cement Bulk</h3>
-                            <p>Optimized dry bulk flow</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="product-grid-item">
-                        <img src="images/products/gts_product_6.jpeg" alt="Trailer Product 6">
-                        <div class="product-grid-caption">
-                            <h3>Mixer Trailer</h3>
-                            <p>Consistent batch quality</p>
-                        </div>
-                    </div>
+                <div>
+                    <a href="pages/products.html" class="btn btn-sm btn-outline-primary">View All Products</a>
                 </div>
             </div>
-            <div class="text-center mt-2">
-                <a href="pages/products.html" class="btn btn-primary btn-lg">View Full Product Range</a>
+            
+            <div class="row g-4">
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <a href="pages/product-platform.html" class="product-card-modern h-100 d-block text-decoration-none text-dark">
+                        <div class="product-card-img-wrap">
+                            <img src="images/products/gts_product_1.jpeg" alt="Flatbed Trailers">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-accent"></div>
+                            <h3 class="product-card-title">Flatbed Trailers</h3>
+                            <p class="product-card-desc">Versatile platform for general cargo</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <a href="pages/product-fuel-tanker.html" class="product-card-modern h-100 d-block text-decoration-none text-dark">
+                        <div class="product-card-img-wrap">
+                            <img src="images/products/gts_product_2.jpeg" alt="Steel/Aluminium Fuel Tanker Semitrailers">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-accent"></div>
+                            <h3 class="product-card-title">Steel/Aluminium Fuel Tanker Semitrailers</h3>
+                            <p class="product-card-desc">Multi-compartment, up to 65,000L</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <a href="pages/product-lowbed.html" class="product-card-modern h-100 d-block text-decoration-none text-dark">
+                        <div class="product-card-img-wrap">
+                            <img src="images/products/gts_product_4.jpeg" alt="Low Loader/Lowbed">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-accent"></div>
+                            <h3 class="product-card-title">Low Loader/Lowbed</h3>
+                            <p class="product-card-desc">20–150t, extendable, hydraulic options</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <a href="pages/product-tipper.html" class="product-card-modern h-100 d-block text-decoration-none text-dark">
+                        <div class="product-card-img-wrap">
+                            <img src="images/products/gts_product_5.jpeg" alt="Tipper Dump Trailers">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-accent"></div>
+                            <h3 class="product-card-title">Tipper Dump Trailers</h3>
+                            <p class="product-card-desc">U/Box/Scrap/Side/Insulated types</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <a href="pages/product-cement.html" class="product-card-modern h-100 d-block text-decoration-none text-dark">
+                        <div class="product-card-img-wrap">
+                            <img src="images/products/gts_product_6.jpeg" alt="Cement Bulk Trailer (V-Type/W-Type)">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-accent"></div>
+                            <h3 class="product-card-title">Cement Bulk Trailer (V-Type/W-Type)</h3>
+                            <p class="product-card-desc">Dry bulk, black sheet or aluminum</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mx-auto">
+                    <a href="pages/product-mixer.html" class="product-card-modern h-100 d-block text-decoration-none text-dark">
+                        <div class="product-card-img-wrap">
+                            <img src="images/products/gts_product_1.jpeg" alt="Concrete Mixer Semitrailers">
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-card-accent"></div>
+                            <h3 class="product-card-title">Concrete Mixer Semitrailers</h3>
+                            <p class="product-card-desc">12–16m³, PTO or diesel drive</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -189,35 +211,32 @@
             
             <div class="row">
                 <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="service-box">
-                        <i class="fas fa-truck-moving"></i>
-                        <h3>Trailer Manufacturing</h3>
-                        <p>Custom trailer design and manufacturing for all purposes</p>
-                    </div>
+                    <a href="pages/services.html" class="service-box d-block text-decoration-none text-dark h-100 shadow-sm p-4 rounded-3 bg-white">
+                        <div class="mb-3 text-primary" style="font-size:2.5rem;"><i class="fas fa-truck-moving"></i></div>
+                        <h3 class="h5 fw-bold mb-2">Trailer Manufacturing</h3>
+                        <p class="mb-0 small">Custom trailer design and manufacturing for all industries and cargo types.</p>
+                    </a>
                 </div>
-                
                 <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="service-box">
-                        <i class="fas fa-tools"></i>
-                        <h3>Metal Fabrication</h3>
-                        <p>General metal fabrication and welding works</p>
-                    </div>
+                    <a href="pages/services.html" class="service-box d-block text-decoration-none text-dark h-100 shadow-sm p-4 rounded-3 bg-white">
+                        <div class="mb-3 text-primary" style="font-size:2.5rem;"><i class="fas fa-tools"></i></div>
+                        <h3 class="h5 fw-bold mb-2">Metal Fabrication</h3>
+                        <p class="mb-0 small">General metal fabrication, precision welding, and custom engineering solutions.</p>
+                    </a>
                 </div>
-                
                 <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="service-box">
-                        <i class="fas fa-wrench"></i>
-                        <h3>Repairs & Maintenance</h3>
-                        <p>Trailer refurbishment and truck repair services</p>
-                    </div>
+                    <a href="pages/services.html" class="service-box d-block text-decoration-none text-dark h-100 shadow-sm p-4 rounded-3 bg-white">
+                        <div class="mb-3 text-primary" style="font-size:2.5rem;"><i class="fas fa-wrench"></i></div>
+                        <h3 class="h5 fw-bold mb-2">Repairs & Maintenance</h3>
+                        <p class="mb-0 small">Expert repairs, refurbishment, and scheduled maintenance for trailers and trucks.</p>
+                    </a>
                 </div>
-                
                 <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="service-box">
-                        <i class="fas fa-ruler-combined"></i>
-                        <h3>Wheel Alignment</h3>
-                        <p>Light & heavy vehicle wheel alignment services</p>
-                    </div>
+                    <a href="pages/services.html" class="service-box d-block text-decoration-none text-dark h-100 shadow-sm p-4 rounded-3 bg-white">
+                        <div class="mb-3 text-primary" style="font-size:2.5rem;"><i class="fas fa-cogs"></i></div>
+                        <h3 class="h5 fw-bold mb-2">Parts & Tyres Sales</h3>
+                        <p class="mb-0 small">Sales of genuine spare parts, new and used tyres, and accessories for all vehicle types.</p>
+                    </a>
                 </div>
             </div>
             
@@ -332,54 +351,9 @@
                         <li><a href="pages/services.html">View All Services</a></li>
                     </ul>
                 </div>
-                
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="pages/about.html">About Us</a></li>
-                        <li><a href="pages/products.html">Products</a></li>
-                        <li><a href="pages/gallery.html">Gallery</a></li>
-                        <li><a href="pages/contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <h4>Contact Information</h4>
-                    <ul class="footer-contact">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Community 25 Junction, Aflao-Road, Tema, Accra-Ghana (GK-0143-7848)</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone-alt"></i>
-                            <span>+233 20 625 5801</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <span>info@gtstrailers.com</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            <span>Mon-Fri: 08:30 – 17:00<br>Sat: 08:30 – 13:00</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2025 GTS TRAILERS AFRICA LTD. All Rights Reserved.</p>
             </div>
         </div>
-    </footer>
-    
-    <!-- Back to Top Button -->
-    <a href="#" id="back-to-top" class="btn btn-primary back-to-top" role="button">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-    
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    </section>
     
     <!-- Custom JavaScript -->
     <script src="js/main.js"></script>

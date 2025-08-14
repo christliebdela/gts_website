@@ -1,3 +1,16 @@
+// Product Carousel Thumbnail Navigation (for product details pages)
+// (Currently not used since thumbnails are removed, but kept for future use)
+// document.addEventListener('DOMContentLoaded', function() {
+//     const thumbnails = document.querySelectorAll('[data-bs-target="#productCarousel"]');
+//     thumbnails.forEach(thumb => {
+//         thumb.addEventListener('click', function() {
+//             const slideIndex = this.getAttribute('data-bs-slide-to');
+//             const carousel = document.querySelector('#productCarousel');
+//             const bsCarousel = bootstrap.Carousel.getInstance(carousel);
+//             bsCarousel.to(parseInt(slideIndex));
+//         });
+//     });
+// });
 // GTS TRAILERS AFRICA LTD - Main JavaScript File
 
 document.addEventListener('DOMContentLoaded', function() {
