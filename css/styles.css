@@ -22,6 +22,11 @@
   border-left: 4px solid var(--primary-color);
 }
 .spec-badges .badge {font-size:.6rem;letter-spacing:.5px;font-weight:600;padding:.45rem .75rem;}
+.spec-badges.no-wrap {display:flex;flex-wrap:nowrap;gap:8px;overflow:auto;padding-bottom:2px;}
+.spec-badges.no-wrap::-webkit-scrollbar{height:4px;}
+.spec-badges.no-wrap::-webkit-scrollbar-thumb{background:rgba(26,75,132,.4);border-radius:4px;}
+.spec-heading {position:relative;font-size:1.05rem;font-weight:700;letter-spacing:.5px;padding-left:10px;text-transform:uppercase;color:var(--primary-color);} 
+.spec-heading:before {content:"";position:absolute;left:0;top:4px;bottom:4px;width:4px;border-radius:2px;background:linear-gradient(180deg,var(--primary-color),var(--secondary-color));}
 .spec-grid {display:grid;grid-template-columns:1fr;gap:12px;}
 @media (min-width:480px){.spec-grid {grid-template-columns:1fr;}}
 @media (min-width:576px){.spec-grid {grid-template-columns:1fr;}}

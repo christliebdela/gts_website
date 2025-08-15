@@ -23,108 +23,83 @@
     
     <style>
         /* About Page Specific Styles */
-        .leadership-box {
-            transition: transform 0.3s ease;
-            background-color: white;
-        }
-        
-        .leadership-box:hover {
-            transform: translateY(-10px);
-        }
-        
-        .value-box {
+        .card {
             transition: all 0.3s ease;
         }
         
-        .value-box:hover {
+        .hover-shadow:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+        }
+        
+        .hover-translate {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-translate:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
         }
         
-        blockquote {
-            border-left: 4px solid var(--primary-color);
-            padding-left: 20px;
-            font-style: italic;
+        .icon-circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
         }
         
-        /* Timeline Styling */
-        .timeline {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
+        .bg-gradient-dark {
+            background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
         }
         
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            background-color: var(--primary-color);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -3px;
+        .border-primary {
+            border-color: var(--primary-color) !important;
         }
         
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            width: 50%;
-            box-sizing: border-box;
+        .text-primary {
+            color: var(--primary-color) !important;
         }
         
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            background-color: white;
-            border: 4px solid var(--secondary-color);
-            top: 15px;
-            border-radius: 50%;
-            z-index: 1;
+        .bg-primary {
+            background-color: var(--primary-color) !important;
         }
         
-        .left {
-            left: 0;
+        .bg-primary.bg-opacity-10 {
+            background-color: rgba(var(--primary-rgb), 0.1) !important;
         }
         
-        .right {
-            left: 50%;
-        }
-        
-        .left::after {
-            right: -12px;
-        }
-        
-        .right::after {
-            left: -12px;
-        }
-        
-        .timeline-content {
+        /* Milestone Timeline Styling */
+        .milestone-wrapper {
             position: relative;
         }
         
+        .milestone-item {
+            position: relative;
+        }
+        
+        .counter-section {
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .counter-item {
+            padding: 1rem;
+        }
+        
+        /* Responsive adjustments */
         @media screen and (max-width: 768px) {
-            .timeline::after {
-                left: 31px;
+            .milestone-content, .milestone-date {
+                margin-bottom: 1.5rem;
             }
             
-            .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
+            .order-md-1 {
+                order: 1;
             }
             
-            .timeline-item::after {
-                left: 18px;
+            .order-md-2 {
+                order: 2;
             }
             
-            .left::after, .right::after {
-                left: 18px;
-            }
-            
-            .right {
-                left: 0;
+            .order-md-3 {
+                order: 3;
             }
         }
     </style>
@@ -170,16 +145,16 @@
         </nav>
     </header>
     
-    <!-- Page Header -->
-    <section class="page-header" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/about-header.jpg'); background-size: cover; background-position: center;">
+    <!-- Hero Banner (Shorter) -->
+    <section class="product-hero d-flex align-items-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../images/servives/gts_services_10.jpeg'); height: 280px; background-size: cover; background-position: center;">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center text-white py-5">
-                    <h1>About Us</h1>
+                <div class="col-12">
+                    <h1 class="display-4 fw-bold mb-2 text-white">About Us</h1>
                     <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
+                        <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item"><a href="../index.html" class="text-white">Home</a></li>
-                            <li class="breadcrumb-item active text-white" aria-current="page">About Us</li>
+                            <li class="breadcrumb-item active text-white-50" aria-current="page">About Us</li>
                         </ol>
                     </nav>
                 </div>
@@ -205,151 +180,320 @@
             </div>
             
             <!-- Leadership Section -->
-            <div class="row mb-5">
-                <div class="col-12">
-                    <div class="section-title text-center">
-                        <h2>Our Leadership</h2>
+            <div class="row mb-5 align-items-center">
+                <div class="col-12 mb-4">
+                    <h2 class="fw-bold border-start border-primary border-4 ps-3">Leadership Team</h2>
+                    <p class="lead text-muted">Meet the experts behind GTS TRAILERS AFRICA LTD</p>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="card border-0 rounded-3 overflow-hidden hover-shadow">
+                        <div class="position-relative">
+                            <img src="../images/john-baidoo.jpg" alt="Mr. John Baidoo" class="card-img-top" style="height: 280px; object-fit: cover;">
+                            <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
+                                <h4 class="text-white mb-0">Mr. John Baidoo</h4>
+                                <p class="text-white-50 mb-0">Founder & CEO</p>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">With over 25 years of professional experience from the United States, Mr. Baidoo brings exceptional leadership as an ASE-certified Master Technician and Operations Specialist.</p>
+                            <hr class="my-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-envelope text-primary me-2"></i>
+                                <small>john.baidoo@gtstrailers.com</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <div class="leadership-box text-center p-4 h-100 shadow rounded">
-                        <div class="leadership-img mb-4">
-                            <img src="../images/john-baidoo.jpg" alt="Mr. John Baidoo" class="img-fluid rounded-circle" style="width: 200px; height: 200px; object-fit: cover;">
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="card border-0 rounded-3 overflow-hidden hover-shadow">
+                        <div class="position-relative">
+                            <img src="../images/michael-arlen.jpg" alt="Michael Arlen" class="card-img-top" style="height: 280px; object-fit: cover;">
+                            <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
+                                <h4 class="text-white mb-0">Michael Arlen</h4>
+                                <p class="text-white-50 mb-0">Sales Manager</p>
+                            </div>
                         </div>
-                        <h3>Mr. John Baidoo</h3>
-                        <p class="text-muted mb-3">Founder & CEO</p>
-                        <p>With over 25 years of professional experience from the United States, Mr. Baidoo brings exceptional leadership to GTS TRAILERS AFRICA LTD.</p>
-                        <p>As an ASE-certified Master Technician and Operations Specialist, he has extensive expertise in precision welding, electrical diagnostics, brake systems, hydraulic systems, and tire services.</p>
+                        <div class="card-body">
+                            <p class="card-text">Michael oversees all sales operations, ensuring our clients receive personalized service and the perfect trailer solutions for their specific needs.</p>
+                            <hr class="my-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-phone text-primary me-2"></i>
+                                <small>+233 20 625 5801</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <div class="leadership-box text-center p-4 h-100 shadow rounded">
-                        <div class="leadership-img mb-4">
-                            <img src="../images/michael-arlen.jpg" alt="Michael Arlen" class="img-fluid rounded-circle" style="width: 200px; height: 200px; object-fit: cover;">
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="card border-0 rounded-3 overflow-hidden hover-shadow">
+                        <div class="position-relative">
+                            <img src="../images/arif-yildirim.jpg" alt="Arif Yildirim" class="card-img-top" style="height: 280px; object-fit: cover;">
+                            <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
+                                <h4 class="text-white mb-0">Arif Yildirim</h4>
+                                <p class="text-white-50 mb-0">Managing Director</p>
+                            </div>
                         </div>
-                        <h3>Michael Arlen</h3>
-                        <p class="text-muted mb-3">Sales Manager</p>
-                        <p>Michael oversees all sales operations for GTS TRAILERS AFRICA LTD, ensuring our clients receive personalized service and the perfect trailer solutions for their specific needs.</p>
-                        <p>Contact: +233 20 625 5801</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <div class="leadership-box text-center p-4 h-100 shadow rounded">
-                        <div class="leadership-img mb-4">
-                            <img src="../images/arif-yildirim.jpg" alt="Arif Yildirim" class="img-fluid rounded-circle" style="width: 200px; height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <p class="card-text">Arif brings extensive experience from our Turkish operations, ensuring world-class quality and service throughout our African operations.</p>
+                            <hr class="my-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-phone text-primary me-2"></i>
+                                <small>+233 50 705 4776</small>
+                            </div>
                         </div>
-                        <h3>Arif Yildirim</h3>
-                        <p class="text-muted mb-3">Managing Director</p>
-                        <p>Arif brings extensive experience from our Turkish operations, ensuring that GTS TRAILERS AFRICA delivers the same world-class quality and service that has made our parent company successful globally.</p>
-                        <p>Contact: +233 50 705 4776</p>
                     </div>
                 </div>
             </div>
             
             <!-- Mission & Vision Section -->
-            <div class="row mb-5">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <div class="mission-box p-4 h-100 shadow rounded bg-light">
-                        <div class="section-title text-start mb-4">
-                            <h2>Our Mission</h2>
+            <div class="row mb-5 gx-5">
+                <div class="col-12 mb-4">
+                    <h2 class="fw-bold border-start border-primary border-4 ps-3">Our Purpose</h2>
+                    <p class="lead text-muted">Driving excellence in trailer manufacturing across Africa</p>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 rounded-3 bg-light h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="icon-circle bg-primary text-white rounded-circle p-3 me-3">
+                                    <i class="fas fa-bullseye fa-2x"></i>
+                                </div>
+                                <h3 class="card-title mb-0">Mission</h3>
+                            </div>
+                            <div class="card-text">
+                                <p class="fw-light fs-5 fst-italic text-primary">
+                                    "To provide quality and safe vehicles for customers in Ghana and Africa by combining experiences with strong production infrastructure in the heavy cargo transportation sector, understanding customer needs and expectations in the best way."
+                                </p>
+                                <p>At GTS TRAILERS AFRICA LTD, we are dedicated to delivering superior products that meet the highest safety standards while understanding the unique requirements of the African market.</p>
+                            </div>
                         </div>
-                        <blockquote class="blockquote">
-                            <p class="mb-0">To provide quality and safe vehicles for customers in Ghana and Africa by combining experiences with strong production infrastructure in the heavy cargo transportation sector, understanding customer needs and expectations in the best way.</p>
-                        </blockquote>
-                        <p class="mt-3">At GTS TRAILERS AFRICA LTD, we are dedicated to delivering superior products that meet the highest safety standards while understanding the unique requirements of the African market.</p>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="vision-box p-4 h-100 shadow rounded bg-light">
-                        <div class="section-title text-start mb-4">
-                            <h2>Our Vision</h2>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 rounded-3 bg-light h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="icon-circle bg-primary text-white rounded-circle p-3 me-3">
+                                    <i class="fas fa-eye fa-2x"></i>
+                                </div>
+                                <h3 class="card-title mb-0">Vision</h3>
+                            </div>
+                            <div class="card-text">
+                                <p class="fw-light fs-5 fst-italic text-primary">
+                                    "To become the one-stop-shop for all best quality world standard semitrailer production and supply within Ghana and the rest of Africa."
+                                </p>
+                                <p>We follow technological developments to reach better production standards, providing reliable and consistent quality services worldwide. Our goal is to become a world brand that provides solutions to customers in all conditions.</p>
+                            </div>
                         </div>
-                        <blockquote class="blockquote">
-                            <p class="mb-0">To follow technological developments with the aim of reaching better production standards, providing reliable and consistent quality services worldwide, and becoming a world brand that provides solutions to customers in all conditions. To become the one-stop-shop for all best quality world standard semitrailer production and supply within Ghana and the rest of Africa.</p>
-                        </blockquote>
-                        <p class="mt-3">We continuously strive to integrate the latest technologies and innovations to maintain our position as the premier trailer manufacturer in the region.</p>
                     </div>
                 </div>
             </div>
             
             <!-- Values Section -->
-            <div class="row">
+            <div class="row mb-5">
+                <div class="col-12 mb-4">
+                    <h2 class="fw-bold border-start border-primary border-4 ps-3">Core Values</h2>
+                    <p class="lead text-muted">The principles that drive our business</p>
+                </div>
+                
                 <div class="col-12">
-                    <div class="section-title text-center">
-                        <h2>Our Core Values</h2>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="value-box text-center p-3 h-100 shadow-sm rounded">
-                        <div class="value-icon mb-3">
-                            <i class="fas fa-award fa-3x text-primary"></i>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                        <div class="col">
+                            <div class="card h-100 border-0 rounded-3 hover-translate">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="value-icon bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                            <i class="fas fa-award fa-2x text-primary"></i>
+                                        </div>
+                                        <h4 class="mb-0">Quality</h4>
+                                    </div>
+                                    <div class="border-top pt-3 mt-2">
+                                        <p class="mb-0">Unwavering commitment to European standards in all our products and services</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h4>Quality</h4>
-                        <p>Unwavering commitment to European standards in all our products and services</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="value-box text-center p-3 h-100 shadow-sm rounded">
-                        <div class="value-icon mb-3">
-                            <i class="fas fa-shield-alt fa-3x text-primary"></i>
+                        
+                        <div class="col">
+                            <div class="card h-100 border-0 rounded-3 hover-translate">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="value-icon bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                            <i class="fas fa-shield-alt fa-2x text-primary"></i>
+                                        </div>
+                                        <h4 class="mb-0">Safety</h4>
+                                    </div>
+                                    <div class="border-top pt-3 mt-2">
+                                        <p class="mb-0">Prioritizing the safety of our products, customers, and employees at all times</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h4>Safety</h4>
-                        <p>Prioritizing the safety of our products, customers, and employees at all times</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="value-box text-center p-3 h-100 shadow-sm rounded">
-                        <div class="value-icon mb-3">
-                            <i class="fas fa-handshake fa-3x text-primary"></i>
+                        
+                        <div class="col">
+                            <div class="card h-100 border-0 rounded-3 hover-translate">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="value-icon bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                            <i class="fas fa-handshake fa-2x text-primary"></i>
+                                        </div>
+                                        <h4 class="mb-0">Integrity</h4>
+                                    </div>
+                                    <div class="border-top pt-3 mt-2">
+                                        <p class="mb-0">Conducting business with honesty, transparency, and ethical practices</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h4>Integrity</h4>
-                        <p>Conducting business with honesty, transparency, and ethical practices</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="value-box text-center p-3 h-100 shadow-sm rounded">
-                        <div class="value-icon mb-3">
-                            <i class="fas fa-lightbulb fa-3x text-primary"></i>
+                        
+                        <div class="col">
+                            <div class="card h-100 border-0 rounded-3 hover-translate">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="value-icon bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                            <i class="fas fa-lightbulb fa-2x text-primary"></i>
+                                        </div>
+                                        <h4 class="mb-0">Innovation</h4>
+                                    </div>
+                                    <div class="border-top pt-3 mt-2">
+                                        <p class="mb-0">Continuously improving our processes and products to meet evolving market needs</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h4>Innovation</h4>
-                        <p>Continuously improving our processes and products to meet evolving market needs</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Achievement Timeline Section -->
+    <!-- Company Milestones Section -->
     <section class="achievements py-5 bg-light">
         <div class="container">
-            <div class="section-title text-center mb-5">
-                <h2>Our Journey</h2>
-                <p>Milestones in our path to excellence</p>
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="fw-bold">Our Journey</h2>
+                    <p class="lead text-muted mb-0">Key milestones in our path to excellence</p>
+                </div>
             </div>
             
-            <div class="timeline">
-                <div class="timeline-item left">
-                    <div class="timeline-content shadow rounded bg-white p-4">
-                        <h4>Company Foundation</h4>
-                        <p>Establishment of GTS TRAILERS AFRICA LTD in Ghana as a branch of GT GURLESENYIL TRAILER from Ankara-Turkey</p>
+            <div class="row">
+                <div class="col-12">
+                    <div class="position-relative milestone-wrapper pb-5">
+                        <!-- Timeline bar -->
+                        <div class="position-absolute start-50 translate-middle-x d-none d-md-block" style="width: 2px; background-color: var(--primary-color); height: calc(100% - 60px); top: 30px; z-index: 0;"></div>
+                        
+                        <!-- Milestone 1 -->
+                        <div class="row mb-5 milestone-item">
+                            <div class="col-md-5 pe-md-5 text-md-end">
+                                <div class="milestone-date">
+                                    <span class="badge bg-primary fs-5 px-3 py-2">2020</span>
+                                </div>
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-center align-items-start">
+                                <div class="milestone-icon bg-white rounded-circle p-2 border border-3 border-primary position-relative" style="width: 25px; height: 25px; z-index: 1;">
+                                    <div class="bg-primary w-100 h-100 rounded-circle"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 ps-md-5">
+                                <div class="milestone-content">
+                                    <h4>Company Foundation</h4>
+                                    <p class="text-muted mb-0">Establishment of GTS TRAILERS AFRICA LTD in Ghana as a branch of GT GURLESENYIL TRAILER from Ankara-Turkey</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Milestone 2 -->
+                        <div class="row mb-5 milestone-item">
+                            <div class="col-md-5 pe-md-5 text-md-end order-md-1 order-3">
+                                <div class="milestone-content text-md-end">
+                                    <h4>European Certification</h4>
+                                    <p class="text-muted mb-0">Acquired the "European type approval certificate" for high-performance trailer manufacturing</p>
+                                </div>
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-center align-items-start order-md-2 order-1">
+                                <div class="milestone-icon bg-white rounded-circle p-2 border border-3 border-primary position-relative" style="width: 25px; height: 25px; z-index: 1;">
+                                    <div class="bg-primary w-100 h-100 rounded-circle"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 ps-md-5 order-md-3 order-2">
+                                <div class="milestone-date">
+                                    <span class="badge bg-primary fs-5 px-3 py-2">2021</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Milestone 3 -->
+                        <div class="row mb-5 milestone-item">
+                            <div class="col-md-5 pe-md-5 text-md-end">
+                                <div class="milestone-date">
+                                    <span class="badge bg-primary fs-5 px-3 py-2">2023</span>
+                                </div>
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-center align-items-start">
+                                <div class="milestone-icon bg-white rounded-circle p-2 border border-3 border-primary position-relative" style="width: 25px; height: 25px; z-index: 1;">
+                                    <div class="bg-primary w-100 h-100 rounded-circle"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 ps-md-5">
+                                <div class="milestone-content">
+                                    <h4>Expansion</h4>
+                                    <p class="text-muted mb-0">Expanded our manufacturing capabilities to serve clients across multiple African countries</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Milestone 4 -->
+                        <div class="row milestone-item">
+                            <div class="col-md-5 pe-md-5 text-md-end order-md-1 order-3">
+                                <div class="milestone-content text-md-end">
+                                    <h4>Today</h4>
+                                    <p class="text-muted mb-0">Operating as the premier trailer manufacturer in Ghana with a growing presence throughout Africa</p>
+                                </div>
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-center align-items-start order-md-2 order-1">
+                                <div class="milestone-icon bg-white rounded-circle p-2 border border-3 border-primary position-relative" style="width: 25px; height: 25px; z-index: 1;">
+                                    <div class="bg-primary w-100 h-100 rounded-circle"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 ps-md-5 order-md-3 order-2">
+                                <div class="milestone-date">
+                                    <span class="badge bg-primary fs-5 px-3 py-2">2025</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content shadow rounded bg-white p-4">
-                        <h4>European Certification</h4>
-                        <p>Acquired the "European type approval certificate" for high-performance trailer manufacturing</p>
+            </div>
+            
+            <!-- Stats Counter -->
+            <div class="row mt-5 pt-5 text-center counter-section">
+                <div class="col-6 col-md-3 mb-4 mb-md-0">
+                    <div class="counter-item">
+                        <div class="counter-number fs-1 fw-bold text-primary">70+</div>
+                        <div class="counter-label">Countries Served</div>
                     </div>
                 </div>
-                <div class="timeline-item left">
-                    <div class="timeline-content shadow rounded bg-white p-4">
-                        <h4>Expansion</h4>
-                        <p>Expanded our manufacturing capabilities to serve clients across multiple African countries</p>
+                <div class="col-6 col-md-3 mb-4 mb-md-0">
+                    <div class="counter-item">
+                        <div class="counter-number fs-1 fw-bold text-primary">100%</div>
+                        <div class="counter-label">Quality Assurance</div>
                     </div>
                 </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content shadow rounded bg-white p-4">
-                        <h4>Today</h4>
-                        <p>Operating as the premier trailer manufacturer in Ghana with a growing presence throughout Africa</p>
+                <div class="col-6 col-md-3">
+                    <div class="counter-item">
+                        <div class="counter-number fs-1 fw-bold text-primary">500+</div>
+                        <div class="counter-label">Projects Completed</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="counter-item">
+                        <div class="counter-number fs-1 fw-bold text-primary">24/7</div>
+                        <div class="counter-label">Customer Support</div>
                     </div>
                 </div>
             </div>
