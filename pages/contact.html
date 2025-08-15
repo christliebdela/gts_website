@@ -143,6 +143,7 @@
                         <p class="mb-4">Fill out the form below and we'll get back to you as soon as possible.</p>
                         
                         <form id="contactForm" class="needs-validation" novalidate>
+                            <input type="hidden" name="captchaValueField" id="captchaValueField">
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="name" class="form-label">Your Name *</label>
@@ -454,5 +455,10 @@
             }
         });
     </script>
+    
+    <!-- Supabase JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase-client.js"></script>
+    <script src="../js/forms.js"></script>
 </body>
 </html>
