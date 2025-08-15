@@ -149,4 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    
+    // Make sure this file is using the supabaseClient from supabase-client.js
+    const sb = window.supabaseClient;
 });
