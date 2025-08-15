@@ -193,7 +193,7 @@ img {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -679,6 +679,7 @@ img {
   border-radius: 8px;
   cursor: pointer;
   margin-bottom: 20px;
+  
 }
 
 .gallery-item img {
@@ -726,6 +727,7 @@ img {
   border-radius: 30px;
   padding: 8px 20px;
   margin: 0 5px;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
