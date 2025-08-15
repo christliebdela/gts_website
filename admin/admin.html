@@ -116,6 +116,13 @@
     </style>
 </head>
 <body>
+    <!-- Loading Indicator -->
+    <div id="loading-indicator" class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading admin panel...</span>
+      </div>
+    </div>
+
     <!-- Login Panel -->
     <div id="login-panel" style="display: none;">
         <div class="container login-container">
@@ -264,11 +271,52 @@
     
     <!-- Admin Panel JavaScript -->
     <script>
+        console.log("Admin script starting");
+        window.onerror = function(msg, url, line, col, error) {
+            document.getElementById('loading-indicator').innerHTML = `
+                <div class="alert alert-danger">
+                    <h4>Error Loading Admin Panel</h4>
+                    <p>${msg}</p>
+                    <p>Line: ${line}</p>
+                    <button class="btn btn-primary mt-2" onclick="showLoginPanelOnError()">Show Login Form</button>
+                </div>
+            `;
+            console.error("Error caught:", error);
+            return true;
+        };
+
+        function showLoginPanelOnError() {
+            document.getElementById('loading-indicator').style.display = 'none';
+            document.getElementById('login-panel').style.display = 'block';
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             // Supabase initialization using the client file
-            const SUPABASE_URL = 'https://khvbciywajadppmrvxxi.supabase.co';
-            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtodmJjaXl3YWphZHBwbXJ2eHhpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUyNzUwMjgsImV4cCI6MjA3MDg1MTAyOH0.bNbQt-z4_3FvuFfSw0Pvj2DGu9Lf6HeB8BZU_VkvgkY';
-            const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+            // Declare supabaseClient in the outer scope so all functions can access it
+            let supabaseClient;
+
+            // Supabase initialization
+            try {
+                console.log("Initializing Supabase...");
+                const SUPABASE_URL = 'https://khvbciywajadppmrvxxi.supabase.co';
+                const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtodmJjaXl3YWphZHBwbXJ2eHhpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUyNzUwMjgsImV4cCI6MjA3MDg1MTAyOH0.bNbQt-z4_3FvuFfSw0Pvj2DGu9Lf6HeB8BZU_VkvgkY';
+
+                if (!window.supabase) {
+                    throw new Error("Supabase JS library not loaded. Check that the script tag is present and loading correctly.");
+                }
+
+                supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+                console.log("Supabase initialized successfully");
+            } catch (err) {
+                console.error("Failed to initialize Supabase:", err);
+                document.getElementById('loading-indicator').innerHTML = `
+                    <div class="alert alert-danger">
+                        <h4>Supabase Initialization Error</h4>
+                        <p>${err.message}</p>
+                        <button class="btn btn-primary mt-2" onclick="showLoginPanelOnError()">Show Login Form</button>
+                    </div>
+                `;
+            }
             
             // DOM Elements
             const loginPanel = document.getElementById('login-panel');
@@ -281,6 +329,7 @@
             const togglePasswordBtn = document.getElementById('togglePassword');
             const searchInput = document.getElementById('searchInput');
             const searchBtn = document.getElementById('searchBtn');
+            const loadingIndicator = document.getElementById('loading-indicator');
             
             // Show password toggle
             togglePasswordBtn.addEventListener('click', function() {
@@ -304,7 +353,7 @@
                     submitBtn.disabled = true;
                     
                     // Attempt to sign in
-                    const { data, error } = await supabase.auth.signInWithPassword({
+                    const { data, error } = await supabaseClient.auth.signInWithPassword({
                         email: email,
                         password: password
                     });
@@ -328,7 +377,7 @@
             // Logout button
             logoutBtn.addEventListener('click', async function() {
                 try {
-                    await supabase.auth.signOut();
+                    await supabaseClient.auth.signOut();
                     showLoginPanel();
                 } catch (error) {
                     console.error('Error signing out:', error);
@@ -337,13 +386,26 @@
             
             // Check if user is already signed in
             async function checkAuthStatus() {
-                const { data: { session } } = await supabase.auth.getSession();
-                
-                if (session) {
-                    showAdminPanel();
-                    fetchSubmissions();
-                } else {
-                    showLoginPanel();
+                try {
+                    console.log("Checking auth status...");
+                    const { data, error } = await supabaseClient.auth.getSession();
+                    
+                    if (error) {
+                        console.error("Auth error:", error);
+                        throw error;
+                    }
+                    
+                    console.log("Auth data:", data);
+                    
+                    if (data && data.session) {
+                        showAdminPanel();
+                        fetchSubmissions();
+                    } else {
+                        showLoginPanel();
+                    }
+                } catch (err) {
+                    console.error("Authentication check failed:", err);
+                    showLoginPanel(); // Fall back to login form
                 }
             }
             
@@ -351,19 +413,21 @@
             function showLoginPanel() {
                 loginPanel.style.display = 'block';
                 adminPanel.style.display = 'none';
+                loadingIndicator.style.display = 'none'; // Hide loading indicator
             }
             
             // Show admin panel
             function showAdminPanel() {
                 loginPanel.style.display = 'none';
                 adminPanel.style.display = 'block';
+                loadingIndicator.style.display = 'none'; // Hide loading indicator
             }
             
             // Fetch submissions from Supabase
             async function fetchSubmissions() {
                 try {
                     // Fetch contact submissions
-                    const { data: contacts, error: contactsError } = await supabase
+                    const { data: contacts, error: contactsError } = await supabaseClient
                         .from('contact_submissions')
                         .select('*')
                         .order('created_at', { ascending: false });
@@ -372,7 +436,7 @@
                     displayContacts(contacts || []);
                     
                     // Fetch quote requests
-                    const { data: quotes, error: quotesError } = await supabase
+                    const { data: quotes, error: quotesError } = await supabaseClient
                         .from('quote_requests')
                         .select('*')
                         .order('created_at', { ascending: false });
@@ -445,7 +509,7 @@
                     button.addEventListener('click', async function() {
                         const id = this.getAttribute('data-id');
                         try {
-                            const { error } = await supabase
+                            const { error } = await supabaseClient
                                 .from('contact_submissions')
                                 .update({ status: 'responded' })
                                 .eq('id', id);
@@ -526,7 +590,7 @@
                     button.addEventListener('click', async function() {
                         const id = this.getAttribute('data-id');
                         try {
-                            const { error } = await supabase
+                            const { error } = await supabaseClient
                                 .from('quote_requests')
                                 .update({ status: 'quoted' })
                                 .eq('id', id);
@@ -855,6 +919,15 @@
             // Initialize the admin panel
             checkAuthStatus();
         });
+        
+        // Add this near the end of your script before checkAuthStatus() is called
+        setTimeout(() => {
+            // If still showing loading after 5 seconds, show login form
+            if (document.getElementById('loading-indicator').style.display !== 'none') {
+                console.log("Timeout reached, forcing login form display");
+                showLoginPanel();
+            }
+        }, 5000);
     </script>
 </body>
 </html>
