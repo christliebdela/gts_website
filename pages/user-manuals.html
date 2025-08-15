@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download GTS Trailers user manuals, operation & maintenance guides, safety information and product catalog PDFs.">
+    <title>User Manuals & Catalogs - GTS TRAILERS AFRICA LTD</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.ico">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../images/logo.jpg" alt="GTS TRAILERS AFRICA LTD Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="user-manuals.html">User Manuals</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="product-hero d-flex align-items-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../images/servives/gts_services_11.jpeg'); height: 260px; background-size: cover; background-position: center;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display-5 fw-bold mb-2 text-white">User Manuals & Catalog</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="../index.html" class="text-white">Home</a></li>
+                            <li class="breadcrumb-item active text-white-50" aria-current="page">User Manuals</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manuals List -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-2">Downloads</h2>
+                    <p class="text-muted mb-0">Operation, maintenance & safety documentation for GTS trailer products. Click to view online or use the download button.</p>
+                </div>
+                <div class="col-lg-4 mt-4 mt-lg-0 d-flex align-items-start justify-content-lg-end">
+                    <div class="manual-search-wrapper w-100">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="manualSearch" class="form-control form-control-sm manual-search-input" placeholder="Search manuals..." aria-label="Search manuals">
+                        <div class="filter-info text-muted mt-1 d-none" id="filterInfo"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4" id="manualList">
+                <!-- Catalog -->
+                <div class="col-md-6 col-lg-4 manual-item" data-title="catalog">
+                    <div class="manual-card h-100 border rounded p-3 d-flex flex-column bg-white">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 text-primary"><i class="fas fa-file-pdf manual-icon"></i></div>
+                            <div class="flex-grow-1">
+                                <h3 class="h6 fw-bold mb-1">Product Catalog</h3>
+                                <div class="manual-meta text-muted">Reference Brochure</div>
+                            </div>
+                            <span class="badge bg-primary download-badge">PDF</span>
+                        </div>
+                        <p class="small flex-grow-1 mb-3">Overview of trailer ranges, configurations and core technical references.</p>
+                        <div class="d-flex gap-2">
+                            <a href="../user_manuals/catalog.pdf" target="_blank" class="btn btn-sm btn-outline-primary flex-grow-1" aria-label="Open Product Catalog PDF"><i class="fas fa-eye me-1"></i> View</a>
+                            <a href="../user_manuals/catalog.pdf" download class="btn btn-sm btn-primary" aria-label="Download Product Catalog PDF"><i class="fas fa-download me-1"></i>Download</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Manual 1 -->
+                <div class="col-md-6 col-lg-4 manual-item" data-title="user manual 1">
+                    <div class="manual-card h-100 border rounded p-3 d-flex flex-column bg-white">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 text-primary"><i class="fas fa-book manual-icon"></i></div>
+                            <div class="flex-grow-1">
+                                <h3 class="h6 fw-bold mb-1">User Manual Part 1</h3>
+                                <div class="manual-meta text-muted">General Information</div>
+                            </div>
+                            <span class="badge bg-primary download-badge">PDF</span>
+                        </div>
+                        <p class="small flex-grow-1 mb-3">Introduction & basic operational principles for GTS semi-trailers.</p>
+                        <div class="d-flex gap-2">
+                            <a href="../user_manuals/GT-SEMI-TRAILER-GURLESENYIL-TREYLER-KILAVUZ-1.pdf" target="_blank" class="btn btn-sm btn-outline-primary flex-grow-1" aria-label="Open User Manual Part 1 PDF"><i class="fas fa-eye me-1"></i> View</a>
+                            <a href="../user_manuals/GT-SEMI-TRAILER-GURLESENYIL-TREYLER-KILAVUZ-1.pdf" download class="btn btn-sm btn-primary" aria-label="Download User Manual Part 1 PDF"><i class="fas fa-download me-1"></i>Download</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Manual 2 -->
+                <div class="col-md-6 col-lg-4 manual-item" data-title="user manual 2">
+                    <div class="manual-card h-100 border rounded p-3 d-flex flex-column bg-white">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 text-primary"><i class="fas fa-book-open manual-icon"></i></div>
+                            <div class="flex-grow-1">
+                                <h3 class="h6 fw-bold mb-1">User Manual Part 2</h3>
+                                <div class="manual-meta text-muted">Operation & Controls</div>
+                            </div>
+                            <span class="badge bg-primary download-badge">PDF</span>
+                        </div>
+                        <p class="small flex-grow-1 mb-3">Detailed operating procedures & system control descriptions.</p>
+                        <div class="d-flex gap-2">
+                            <a href="../user_manuals/GT-SEMI-TRAILER-GURLESENYIL-TREYLER-KILAVUZ-2.pdf" target="_blank" class="btn btn-sm btn-outline-primary flex-grow-1" aria-label="Open User Manual Part 2 PDF"><i class="fas fa-eye me-1"></i> View</a>
+                            <a href="../user_manuals/GT-SEMI-TRAILER-GURLESENYIL-TREYLER-KILAVUZ-2.pdf" download class="btn btn-sm btn-primary" aria-label="Download User Manual Part 2 PDF"><i class="fas fa-download me-1"></i>Download</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Manual 3 -->
+                <div class="col-md-6 col-lg-4 manual-item" data-title="user manual 3">
+                    <div class="manual-card h-100 border rounded p-3 d-flex flex-column bg-white">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 text-primary"><i class="fas fa-cogs manual-icon"></i></div>
+                            <div class="flex-grow-1">
+                                <h3 class="h6 fw-bold mb-1">User Manual Part 3</h3>
+                                <div class="manual-meta text-muted">Maintenance</div>
+                            </div>
+                            <span class="badge bg-primary download-badge">PDF</span>
+                        </div>
+                        <p class="small flex-grow-1 mb-3">Scheduled service intervals, lubrication charts & component care.</p>
+                        <div class="d-flex gap-2">
+                            <a href="../user_manuals/GT-SEMI-TRAILER-GURLESENYIL-TREYLER-KILAVUZ-3.pdf" target="_blank" class="btn btn-sm btn-outline-primary flex-grow-1" aria-label="Open User Manual Part 3 PDF"><i class="fas fa-eye me-1"></i> View</a>
+                            <a href="../user_manuals/GT-SEMI-TRAILER-GURLESENYIL-TREYLER-KILAVUZ-3.pdf" download class="btn btn-sm btn-primary" aria-label="Download User Manual Part 3 PDF"><i class="fas fa-download me-1"></i>Download</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Manual 4 -->
+                <div class="col-md-6 col-lg-4 manual-item" data-title="user manual 4">
+                    <div class="manual-card h-100 border rounded p-3 d-flex flex-column bg-white">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 text-primary"><i class="fas fa-exclamation-triangle manual-icon"></i></div>
+                            <div class="flex-grow-1">
+                                <h3 class="h6 fw-bold mb-1">User Manual Part 4</h3>
+                                <div class="manual-meta text-muted">Safety & Warnings</div>
+                            </div>
+                            <span class="badge bg-primary download-badge">PDF</span>
+                        </div>
+                        <p class="small flex-grow-1 mb-3">Critical safety instructions, hazard identification & compliance.</p>
+                        <div class="d-flex gap-2">
+                            <a href="../user_manuals/GT-SEMI-TRAILER-GURLESENYIL-TREYLER-KILAVUZ-4.pdf" target="_blank" class="btn btn-sm btn-outline-primary flex-grow-1" aria-label="Open User Manual Part 4 PDF"><i class="fas fa-eye me-1"></i> View</a>
+                            <a href="../user_manuals/GT-SEMI-TRAILER-GURLESENYIL-TREYLER-KILAVUZ-4.pdf" download class="btn btn-sm btn-primary" aria-label="Download User Manual Part 4 PDF"><i class="fas fa-download me-1"></i>Download</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Manual 5 -->
+                <div class="col-md-6 col-lg-4 manual-item" data-title="user manual 5">
+                    <div class="manual-card h-100 border rounded p-3 d-flex flex-column bg-white">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 text-primary"><i class="fas fa-tools manual-icon"></i></div>
+                            <div class="flex-grow-1">
+                                <h3 class="h6 fw-bold mb-1">User Manual Part 5</h3>
+                                <div class="manual-meta text-muted">Troubleshooting</div>
+                            </div>
+                            <span class="badge bg-primary download-badge">PDF</span>
+                        </div>
+                        <p class="small flex-grow-1 mb-3">Diagnostics, common fault resolution and service escalation paths.</p>
+                        <div class="d-flex gap-2">
+                            <a href="../user_manuals/GT-SEMI-TRAILER-GURLESENYIL-TREYLER-KILAVUZ-5.pdf" target="_blank" class="btn btn-sm btn-outline-primary flex-grow-1" aria-label="Open User Manual Part 5 PDF"><i class="fas fa-eye me-1"></i> View</a>
+                            <a href="../user_manuals/GT-SEMI-TRAILER-GURLESENYIL-TREYLER-KILAVUZ-5.pdf" download class="btn btn-sm btn-primary" aria-label="Download User Manual Part 5 PDF"><i class="fas fa-download me-1"></i>Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-info small mt-5 mb-0"><i class="fas fa-info-circle me-2"></i>Need a document not listed here? Contact <a href="mailto:info@gtstrailers.com" class="alert-link">info@gtstrailers.com</a> for additional technical sheets or certification records.</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h4>About GTS Trailers</h4>
+                    <p>GTS TRAILERS AFRICA LTD is a premium trailer manufacturing company offering high-quality products and services across Ghana and Africa.</p>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html#manufacturing">Trailer Manufacturing</a></li>
+                        <li><a href="services.html#fabrication">Metal Fabrication</a></li>
+                        <li><a href="services.html#repairs">Repairs & Maintenance</a></li>
+                        <li><a href="services.html#alignment">Wheel Alignment</a></li>
+                        <li><a href="services.html">View All Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4>Contact Information</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>Community 25 Junction, Aflao-Road, Tema, Accra-Ghana (GK-0143-7848)</span></li>
+                        <li><i class="fas fa-phone-alt"></i><span>+233 20 625 5801</span></li>
+                        <li><i class="fas fa-envelope"></i><span>info@gtstrailers.com</span></li>
+                        <li><i class="fas fa-clock"></i><span>Mon-Fri: 08:30 – 17:00<br>Sat: 08:30 – 13:00</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 GTS TRAILERS AFRICA LTD. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple client-side filter for manual cards
+        const searchInput = document.getElementById('manualSearch');
+        const manualItems = document.querySelectorAll('.manual-item');
+        const filterInfo = document.getElementById('filterInfo');
+        if (searchInput) {
+            searchInput.addEventListener('input', () => {
+                const q = searchInput.value.trim().toLowerCase();
+                let visible = 0;
+                manualItems.forEach(item => {
+                    const title = item.getAttribute('data-title');
+                    if (!q || title.includes(q)) {
+                        item.classList.remove('d-none');
+                        visible++;
+                    } else {
+                        item.classList.add('d-none');
+                    }
+                });
+                if (q) {
+                    filterInfo.classList.remove('d-none');
+                    filterInfo.textContent = visible + ' result' + (visible === 1 ? '' : 's') + ' found';
+                } else {
+                    filterInfo.classList.add('d-none');
+                    filterInfo.textContent = '';
+                }
+            });
+        }
+    </script>
+    <!-- Custom JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
